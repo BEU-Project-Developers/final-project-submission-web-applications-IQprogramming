@@ -1,4 +1,11 @@
+using Microsoft.EntityFrameworkCore;
+using SDF1.Data;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContextPool<KellyContext>(opt => 
+    opt.UseNpgsql(builder.Configuration.GetConnectionString("KellyContext"))
+);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
