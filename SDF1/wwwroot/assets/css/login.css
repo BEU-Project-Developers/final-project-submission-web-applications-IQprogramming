@@ -1,0 +1,224 @@
+﻿/* Login Page Styles */
+body {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    min-height: 100vh;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 20px;
+}
+
+.login-container {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    padding: 50px;
+    width: 100%;
+    max-width: 550px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.login-container h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 600;
+    font-size: 2rem;
+    position: relative;
+}
+
+.login-container h2::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    border-radius: 2px;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.form-label {
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.form-control {
+    border: 2px solid #e1e5e9;
+    border-radius: 12px;
+    padding: 14px 20px;
+    font-size: 1.05rem;
+    transition: all 0.3s ease;
+    background-color: #fafbfc;
+    height: auto;
+}
+
+.form-control:focus {
+    border-color: #4facfe;
+    box-shadow: 0 0 0 0.2rem rgba(79, 172, 254, 0.25);
+    background-color: #fff;
+    outline: none;
+}
+
+.form-control:hover {
+    border-color: #c3c8d1;
+}
+
+.form-check {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 25px;
+    padding-left: 0;
+}
+
+.form-check-input {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #dee2e6;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.form-check-input:checked {
+    background-color: #4facfe;
+    border-color: #4facfe;
+}
+
+.form-check-input:focus {
+    box-shadow: 0 0 0 0.2rem rgba(79, 172, 254, 0.25);
+}
+
+.form-check-label {
+    color: #555;
+    font-size: 0.95rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    border: none;
+    border-radius: 12px;
+    padding: 14px 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    display: block;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #0056b3, #004085);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 123, 255, 0.3);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+.text-danger {
+    font-size: 0.875rem;
+    margin-top: 5px;
+    display: block;
+}
+
+/* Sign up link styling */
+.mt-3 {
+    text-align: center;
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #e9ecef;
+    color: #666;
+}
+
+.mt-3 a {
+    color: #4facfe;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.mt-3 a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Validation Summary Styling */
+.validation-summary-errors {
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    color: #721c24;
+}
+
+/* Responsive Design */
+@media (max-width: 576px) {
+    .login-container {
+        padding: 30px 20px;
+        margin: 10px;
+    }
+
+    .login-container h2 {
+        font-size: 1.75rem;
+    }
+}
+
+/* Loading Animation */
+.btn-primary:disabled {
+    background: #6c757d;
+    cursor: not-allowed;
+}
+
+/* Form Animation */
+.login-container {
+    animation: slideUp 0.6s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Password field icon (optional enhancement) */
+.password-field {
+    position: relative;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #6c757d;
+    transition: color 0.3s ease;
+}
+
+.password-toggle:hover {
+    color: #4facfe;
+}
